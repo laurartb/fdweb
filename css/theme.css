@@ -1,0 +1,30 @@
+:root {
+	--color-fondo: #ffffff;
+	--color-texto: #000000;
+	/* ...otros colores... */
+}
+:root.dark {
+	--color-fondo: #121212;
+	--color-texto: #eaeaea;
+}
+
+
+/* esto lo he copiado y pegado directamente de webfundamentals-docs-css-color, de uno de los primeros pasos*/
+
+
+
+/* Tema claro por defecto */
+.page-content {
+	--color-fondo: #fff;
+	--color-texto: #000;
+}
+/* Tema oscuro cuando el checkbox esté activado */
+#theme-toggle:checked ~ .page-content {
+	--color-fondo: #121212;
+	--color-texto: #eaeaea;
+}
+/* Utilizar las variables en los elementos */
+body {
+	background: var(--color-fondo);
+	color: var(--color-texto);
+}
