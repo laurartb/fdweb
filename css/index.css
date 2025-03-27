@@ -1,2 +1,71 @@
 @import url('http://meyerweb.com/eric/tools/css/reset/reset.css'); /* CSS Reset para compatibilidad entre navegadores */
 @import url('main.css'); /* Estilos principales */
+
+
+/* barra de navegación de menú */
+nav {
+    background-color: #bdb8b8; /* Color de fondo del menú */
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* ajustes que mantienen imagenes y texto centrados */
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+img, video {
+    max-width: 80%; /* Ajusta el tamaño máximo */
+    border-radius: 10px; /* Esquinas redondeadas */
+    margin: 10px auto; /* Centrar imágenes */
+    display: block;
+}
+
+p {
+    margin-bottom: 40px; /* Espacio debajo de cada párrafo */
+    margin-top: 40px; /* Espacio encima de cada párrafo */
+}
+
+h1 {
+    margin-bottom: 30px; /* Más espacio debajo del título */
+    margin-top: 30px; /* Más espacio encima del título */
+}
+
+h2 {
+    margin-bottom: 30px; /* Más espacio debajo del título */
+    margin-top: 30px; /* Más espacio encima del título */
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    color: #bdb8b0;
+}
