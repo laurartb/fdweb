@@ -25,8 +25,8 @@
 }
 /* Utilizar las variables en los elementos */
 body {
-	background: var(--color-fondo);
-	color: var(--color-texto);
+	background: var(#121212);
+	color: var(#eaeaea);
 }
 
 
