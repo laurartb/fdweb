@@ -14,8 +14,8 @@
                 <ul>
                     <li><a href="#Lumina">Lumina Design</a></li>
                     <li><a href="#Jory">Jory&Co</a></li>
-                    <li><a href="Basement">Basement Studio</a></li>
-                    <li><a href="Nite"> Nite Riot</a></li>
+                    <li><a href="#Basement">Basement Studio</a></li>
+                    <li><a href="#Nite">Nite Riot</a></li>
                 </ul>
             </nav>
 
@@ -37,70 +37,91 @@
                     font-family: 'Arial', sans-serif; /* Cambia por la tipografía que quieras */
                     }
 
+                    html {
+                    scroll-behavior: smooth;
+                    } /*efecto para que el menu scrollee*/
 
 
-
-                body {
-	            margin: 0;
-	            font-family: sans-serif;
-                }
-
-                header,
-                footer {
-                    background: #310874;
-                    color: #fff;
-                    text-align: center;
-                    padding: 1rem;
-                }
-
-                .contenedor {
-                    display: flex;
-                    flex-wrap: wrap;
-                    max-width: 1200px;
-                    margin: auto;
-                    padding: 1rem;
-                }
-
-                .columna {
-                    /*
-                        Sintaxis: flex: [flex-grow] [flex-shrink] [flex-basis];
-                        - flex-grow:    1 → permite que crezca para ocupar espacio disponible
-                        - flex-shrink:  1 → permite que se reduzca si no cabe
-                        - flex-basis: 100% → ancho base deseado para esta columna
-                        En este caso: 1 columna por fila en móvil.
-                    */
-                    flex: 1 1 100%;
-                    box-sizing: border-box;
-                    padding: 1rem;
-                }
-                
-                .columna:nth-child(odd) {
-                    background: #3108742c;
-                }
-                         
-                
-                
-                /* Tablet (min-width: 600px) — 2 columnas */
-                @media (min-width: 600px) {
-                    .columna {
-                        /* 2 columnas por fila: cada una ~50% del ancho */
-                        flex: 1 1 50%;
+                    body {
+                    margin: 0;
+                    font-family: sans-serif;
                     }
-                }
 
-                /* Desktop (min-width: 900px) — 3 columnas */
-                @media (min-width: 900px) {
-                    .columna {
-                        /* 3 columnas por fila: cada una ~33.33% del ancho */
-                        flex: 1 1 33.33%;
+                    header,
+                    footer {
+                        background: #310874;
+                        color: #fff;
+                        text-align: center;
+                        padding: 1rem;
                     }
+
+                    .contenedor {
+                        display: flex;
+                        flex-wrap: wrap;
+                        max-width: 1200px;
+                        margin: auto;
+                        padding: 1rem;
+                    }
+
+                    .columna {
+                        /*
+                            Sintaxis: flex: [flex-grow] [flex-shrink] [flex-basis];
+                            - flex-grow:    1 → permite que crezca para ocupar espacio disponible
+                            - flex-shrink:  1 → permite que se reduzca si no cabe
+                            - flex-basis: 100% → ancho base deseado para esta columna
+                            En este caso: 1 columna por fila en móvil.
+                        */
+                        flex: 1 1 100%;
+                        box-sizing: border-box;
+                        padding: 1rem;
+                    }
+                    
+                    .columna:nth-child(odd) {
+                        background: #3108742c;
+                    }
+                            
+                    
+                    
+                    /* Tablet (min-width: 600px) — 2 columnas */
+                    @media (min-width: 600px) {
+                        .columna {
+                            /* 2 columnas por fila: cada una ~50% del ancho */
+                            flex: 1 1 50%;
+                        }
+                    }
+
+                    /* Desktop (min-width: 900px) — 3 columnas */
+                    @media (min-width: 900px) {
+                        .columna {
+                            /* 3 columnas por fila: cada una ~33.33% del ancho */
+                            flex: 1 1 33.33%;
+                        }
+                    }
+
+                    .container {
+                    width: 90%; /* por defecto ocupa 90% del ancho de la ventana/padre */
+                    max-width: 60rem; /* pero no crece más allá de ~60rem (960px si 1rem=16px) */
+                    margin: 0 auto; /* centrado horizontal cuando sea más estrecho que su contenedor padre */
                 }
 
-                .container {
-	            width: 90%; /* por defecto ocupa 90% del ancho de la ventana/padre */
-                max-width: 60rem; /* pero no crece más allá de ~60rem (960px si 1rem=16px) */
-                margin: 0 auto; /* centrado horizontal cuando sea más estrecho que su contenedor padre */
-              }
+
+                .iframe-container {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 16 / 9; /* Cambia si prefieres otro formato */
+                overflow: hidden;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                margin-top: 1rem;
+                }
+
+                .iframe-container iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+                }
+
+
 
             </style>
 
@@ -110,6 +131,17 @@
 		<main class="contenedor">
 
 			<div class="columna 1"> <h2 id="Lumina"> Lumina Design</h2>
+
+                <div class="iframe-container">
+                    <iframe 
+                      src="https://www.lumina-design.co/" 
+                      class="iframe-web" 
+                      loading="lazy"
+                    ></iframe>
+                </div>
+
+                <br>
+
                 <p> La página web de Lumina Design es visualmente atractiva y funcional, destaca por un diseño de interfaz moderno y bien organizado. Desde el primer momento, la estructura del sitio permite una navegación clara y sencilla gracias al equilibrio de elementos, el uso adecuado del espacio en blanco y la jerarquía visual que guía la atención del usuario hacia los contenidos más relevantes. Los iconos y componentes visuales refuerzan la estética general y proporcionan coherencia y un estilo definido.
                 En términos de experiencia del usuario (UX), la página es intuitiva y accesible para una navegación fluida. El menú está bien ubicado en la zona superior y permite moverse fácilmente entre secciones. La organización de los contenidos sigue una lógica. Aunque no se pueden ver elementos específicos de accesibilidad para personas con discapacidades, los tiempos de carga son rápidos.
                 La tipografía utilizada es moderna de tipo sans-serif. La jerarquía tipográfica permite diferenciar con claridad entre títulos, subtítulos y cuerpo de texto. Además, el contraste entre el texto y el fondo mejora la legibilidad, favoreciendo una experiencia clara y accesible.
@@ -120,9 +152,22 @@
                 En cuanto al contenido visual y multimedia, hay imágenes de alta calidad que complementan el contenido textual. Refuerzan el mensaje de la empresa y ayudan a ilustrar los servicios de manera visualmente atractiva.
                 El diseño es muy original y creativo, ya que muestra una propuesta visual única sin plantillas genéricas, alineada con los valores de innovación y diseño que representa la marca. La integración de elementos creativos e interactivos diferencia la web de otras páginas dentro del mismo sector.
                 En mi opinión, la web es clara, la estética es moderna y su estilo es formal. Además, las interacciones al hacer scroll, mover el ratón o pasar por encima de los elementos interactivos mejoran aún más la experiencia del usuario y hacen que la web no sea aburrida. La pantalla de carga refuerza aún más la identidad de la marca y muestra sus colores corporativos. 
-                
+                </p>
+            
+            </div>
                 
             <div class="columna 2"><h2 id="Jory">Jory&Co</h2>
+
+                <div class="iframe-container">
+                    <iframe 
+                      src="https://joryand.co/" 
+                      class="iframe-web" 
+                      loading="lazy"
+                    ></iframe>
+                </div>
+
+                <br>
+
                 <p> La página web de Jory&Co se distingue por un diseño limpio, profesional y sofisticado, reflejando fielmente su identidad como una agencia de diseño global.
                 La disposición de la página permite una navegación intuitiva que facilita el acceso a diversas secciones (como proyectos, clientes, contacto…). 
                 La tipografía empleada es moderna y legible, con una jerarquía tipográfica definida. La paleta de colores utiliza tonos suaves y neutros, reforzando el enfoque minimalista y profesional del sitio, mientras que acentos de color destacan elementos clave y llamadas a la acción, guiando la interacción del usuario. 
@@ -133,7 +178,21 @@
                 El diseño del sitio web evita el uso de plantillas, es por eso que es diferente y original. Esta originalidad está alineada con los valores de innovación y diseño que Jory&Co representa, diferenciándose de otras agencias en el sector.
                 </p>
 
+
+            </div>    
+
             <div class="columna 3"><h2 id="Basement">Basement Studio</h2>
+
+                <div class="iframe-container">
+                    <iframe 
+                      src="https://basement.studio/" 
+                      class="iframe-web" 
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+
+                  <br>
+
                 <p> La página web de Basement Studio tiene un diseño innovador y funcional que refleja su identidad como un estudio. La estructura del sitio web está bien organizada, facilitando una navegación intuitiva que permite a los usuarios acceder a las diversas secciones y contenidos.
                 En cuanto a la experiencia del usuario, el menú está en la parte superior de la web lo que permite una transición fluida entre las secciones.  Guía al usuario desde una visión general de la marca hasta detalles específicos sobre sus servicios y proyectos. A simple vista no se ven elementos específicos dirigidos a personas con discapacidades y los tiempos de carga son rápidos.
                 La elección tipográfica es moderna y de fácil lectura. Hay una jerarquía tipográfica clara que diferencia eficazmente títulos, subtítulos y cuerpo de texto, mejorando la legibilidad y facilitando una experiencia de lectura agradable en dispositivos móviles y de escritorio.
@@ -145,7 +204,20 @@
                 Su diseño es original y creativo, y se alinea con los valores de innovación y diseño de la marca. Los elementos creativos e interactivos hacen que la web resalte y capture la atención.
                 </p>
 
-            <article class="columna 4"><h2 id="Nite">Nite Riot</h2>
+            </div>
+
+            <div class="columna 4"><h2 id="Nite">Nite Riot</h2>
+
+                <div class="iframe-container">
+                    <iframe 
+                      src="https://www.nite-riot.com/" 
+                      class="iframe-web" 
+                      loading="lazy"
+                    ></iframe>
+                </div>
+
+                <br>
+
                <p>La página web de Nite Riot se caracteriza por un diseño visualmente atractivo y funcional.
                 La estructura del sitio web está cuidadosamente organizada, permitiendo una navegación intuitiva que facilita el acceso a las diversas secciones y proyectos destacados. La disposición de los elementos y el uso del espacio contribuyen a una experiencia de usuario fluida y agradable.
                 La tipografía es moderna y clara, con una jerarquía tipográfica bien definida que mejora su legibilidad en diferentes dispositivos. La paleta de colores se compone de tonos neutros reforzando el enfoque minimalista y profesional del sitio, esto permite que el contenido visual destaque sin distraer al usuario.
@@ -155,6 +227,8 @@
                 En cuanto a identidad visual, el logotipo y los gráficos mantienen refuerzan el estilo de la marca, presentando una imagen moderna, limpia y profesional.
                 El diseño del sitio web es original y está alineada con los valores de innovación y diseño que tiene Nite Riot.
                </p>
+
+            </div>
 
         </main>
 
