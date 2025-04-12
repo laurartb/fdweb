@@ -5,11 +5,118 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Ejemplo Responsive</title>
 		<link rel="stylesheet" href="styles.css" />
+
+        <style>
+
+            header, 
+            footer {
+                background: #310874;
+                color: #fff;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            nav ul {
+            list-style: none;
+            padding: 20px;
+            margin: 0;
+            display: flex; /* Menú horizontal */
+            justify-content: center;
+            gap: 30px; /* Espacio entre enlaces */
+            }
+
+            nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #7c4bca;
+            color: white;
+            border-radius: 999px; /* crea el efecto de óvalo */
+            font-weight: bold;
+            font-family: 'Arial', sans-serif; /* Cambia por la tipografía que quieras */
+            }
+
+            html {
+            scroll-behavior: smooth;
+            } /*efecto para que el menu scrollee*/
+
+
+            body {
+            margin: 0;
+            font-family: sans-serif;
+            }
+
+            .contenedor {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 1200px;
+                margin: auto;
+                padding: 1rem;
+            }
+
+            .columna {
+                /*
+                    Sintaxis: flex: [flex-grow] [flex-shrink] [flex-basis];
+                    - flex-grow:    1 → permite que crezca para ocupar espacio disponible
+                    - flex-shrink:  1 → permite que se reduzca si no cabe
+                    - flex-basis: 100% → ancho base deseado para esta columna
+                    En este caso: 1 columna por fila en móvil.
+                */
+                flex: 1 1 100%;
+                box-sizing: border-box;
+                padding: 1rem;
+            }
+            
+            .columna:nth-child(odd) {
+                background: #3108742c;
+            }
+                    
+            
+            
+            /* Tablet (min-width: 600px) — 2 columnas */
+            @media (min-width: 600px) {
+                .columna {
+                    /* 2 columnas por fila: cada una ~50% del ancho */
+                    flex: 1 1 50%;
+                }
+            }
+
+            /* Desktop (min-width: 900px) — 3 columnas */
+            @media (min-width: 900px) {
+                .columna {
+                    /* 3 columnas por fila: cada una ~33.33% del ancho */
+                    flex: 1 1 33.33%;
+                }
+            }
+
+            .container {
+            width: 90%; /* por defecto ocupa 90% del ancho de la ventana/padre */
+            max-width: 60rem; /* pero no crece más allá de ~60rem (960px si 1rem=16px) */
+            margin: 0 auto; /* centrado horizontal cuando sea más estrecho que su contenedor padre */
+        }
+
+
+        .iframe-container {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9; /* Cambia si prefieres otro formato */
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        margin-top: 1rem;
+        }
+
+        .iframe-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        }
+
+    </style>
 	</head>
+
 	<body>
 		<header>
 			<h1>Nuevas Tendencias del Diseño Web</h1>
-
             <nav>
                 <ul>
                     <li><a href="#Lumina">Lumina Design</a></li>
@@ -18,113 +125,6 @@
                     <li><a href="#Nite">Nite Riot</a></li>
                 </ul>
             </nav>
-
-            <style>
-
-                    nav ul {
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
-                    display: flex; /* Menú horizontal */
-                    justify-content: center;
-                    gap: 2rem; /* Espacio entre enlaces */
-                    }
-
-                    nav a {
-                    text-decoration: none;
-                    color: white;
-                    font-weight: bold;
-                    font-family: 'Arial', sans-serif; /* Cambia por la tipografía que quieras */
-                    }
-
-                    html {
-                    scroll-behavior: smooth;
-                    } /*efecto para que el menu scrollee*/
-
-
-                    body {
-                    margin: 0;
-                    font-family: sans-serif;
-                    }
-
-                    header,
-                    footer {
-                        background: #310874;
-                        color: #fff;
-                        text-align: center;
-                        padding: 1rem;
-                    }
-
-                    .contenedor {
-                        display: flex;
-                        flex-wrap: wrap;
-                        max-width: 1200px;
-                        margin: auto;
-                        padding: 1rem;
-                    }
-
-                    .columna {
-                        /*
-                            Sintaxis: flex: [flex-grow] [flex-shrink] [flex-basis];
-                            - flex-grow:    1 → permite que crezca para ocupar espacio disponible
-                            - flex-shrink:  1 → permite que se reduzca si no cabe
-                            - flex-basis: 100% → ancho base deseado para esta columna
-                            En este caso: 1 columna por fila en móvil.
-                        */
-                        flex: 1 1 100%;
-                        box-sizing: border-box;
-                        padding: 1rem;
-                    }
-                    
-                    .columna:nth-child(odd) {
-                        background: #3108742c;
-                    }
-                            
-                    
-                    
-                    /* Tablet (min-width: 600px) — 2 columnas */
-                    @media (min-width: 600px) {
-                        .columna {
-                            /* 2 columnas por fila: cada una ~50% del ancho */
-                            flex: 1 1 50%;
-                        }
-                    }
-
-                    /* Desktop (min-width: 900px) — 3 columnas */
-                    @media (min-width: 900px) {
-                        .columna {
-                            /* 3 columnas por fila: cada una ~33.33% del ancho */
-                            flex: 1 1 33.33%;
-                        }
-                    }
-
-                    .container {
-                    width: 90%; /* por defecto ocupa 90% del ancho de la ventana/padre */
-                    max-width: 60rem; /* pero no crece más allá de ~60rem (960px si 1rem=16px) */
-                    margin: 0 auto; /* centrado horizontal cuando sea más estrecho que su contenedor padre */
-                }
-
-
-                .iframe-container {
-                position: relative;
-                width: 100%;
-                aspect-ratio: 16 / 9; /* Cambia si prefieres otro formato */
-                overflow: hidden;
-                border-radius: 8px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-                margin-top: 1rem;
-                }
-
-                .iframe-container iframe {
-                width: 100%;
-                height: 100%;
-                border: none;
-                }
-
-
-
-            </style>
-
 		</header>
 
 
