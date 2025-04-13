@@ -24,6 +24,7 @@
             display: flex; /* Menú horizontal */
             justify-content: center;
             gap: 30px; /* Espacio entre enlaces */
+            flex-wrap: wrap;
             }
 
             nav a {
@@ -45,12 +46,14 @@
 
             html {
             scroll-behavior: smooth;
-            } /*efecto para que el menu scrollee*/
+            } /*efecto scroll del menu */
 
 
             body {
             margin: 0;
-            font-family: sans-serif;
+            font-family: Georgia;
+            font-size: small;
+            color: #585858;
             }
 
             .contenedor {
@@ -61,69 +64,82 @@
                 padding: 1rem;
             }
 
+           
             .columna {
-                /*
-                    Sintaxis: flex: [flex-grow] [flex-shrink] [flex-basis];
-                    - flex-grow:    1 → permite que crezca para ocupar espacio disponible
-                    - flex-shrink:  1 → permite que se reduzca si no cabe
-                    - flex-basis: 100% → ancho base deseado para esta columna
-                    En este caso: 1 columna por fila en móvil.
-                */
                 flex: 1 1 100%;
                 box-sizing: border-box;
                 padding: 1rem;
+                border-radius: 5px;
             }
             
             .columna:nth-child(odd) {
-                background: #7470705c;
+                background: #7470702d;
             }
                     
             
-            
-            /* Tablet (min-width: 600px) — 2 columnas */
-            @media (min-width: 600px) {
-                .columna {
-                    /* 2 columnas por fila: cada una ~50% del ancho */
-                    flex: 1 1 50%;
-                }
-            }
-
-            /* Desktop (min-width: 900px) — 3 columnas */
-            @media (min-width: 900px) {
+            @media (min-width: 900px) {/* Desktop (min-width: 900px) — 3 columnas */
                 .columna {
                     /* 3 columnas por fila: cada una ~33.33% del ancho */
                     flex: 1 1 33.33%;
                 }
             }
 
+            @media (min-width: 600px) {/* Tablet (min-width: 600px) — 2 columnas */
+                .columna {
+                    /* 2 columnas por fila: cada una ~50% del ancho */
+                    flex: 1 1 50%;
+                }
+            }
+
             .container {
             width: 90%; /* por defecto ocupa 90% del ancho de la ventana/padre */
             max-width: 60rem; /* pero no crece más allá de ~60rem (960px si 1rem=16px) */
-            margin: 0 auto; /* centrado horizontal cuando sea más estrecho que su contenedor padre */
-        }
+            margin: 0 auto; /* centrado horizontal cuando sea más estrecho que su contenedor */
+            }
 
 
-        .iframe-container {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 16 / 9; /* Cambia si prefieres otro formato */
-        overflow: hidden;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        margin-top: 1rem;
-        }
+            .iframe-container { /* previsualización de pag web*/
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+            margin-top: 1rem;
+            }
 
-        .iframe-container iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-        }
+            .iframe-container iframe { /* previsualización de pag web*/
+            width: 100%;
+            height: 100%;
+            border: none;
+            }
 
-    </style>
+            .btn-arriba {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 10px 15px;
+            background-color: #585858c2;
+            color: white;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+            }
+
+            .btn-arriba:hover {
+            background-color: #585858c2;
+            }
+
+        </style>
 	</head>
 
 	<body>
 		<header>
+            <a id="top"></a>
 			<h1>Nuevas Tendencias del Diseño Web</h1>
             <nav>
                 <ul>
@@ -133,6 +149,7 @@
                     <li><a href="#Nite">Nite Riot</a></li>
                 </ul>
             </nav>
+
 		</header>
 
 
@@ -150,7 +167,7 @@
 
                 <br>
 
-                <p> La página web de Lumina Design es visualmente atractiva y funcional, destaca por un diseño de interfaz moderno y bien organizado. Desde el primer momento, la estructura del sitio permite una navegación clara y sencilla gracias al equilibrio de elementos, el uso adecuado del espacio en blanco y la jerarquía visual que guía la atención del usuario hacia los contenidos más relevantes. Los iconos y componentes visuales refuerzan la estética general y proporcionan coherencia y un estilo definido.
+                <p> La página web de <a href="https://www.lumina-design.co/">Lumina Design</a> es visualmente atractiva y funcional, destaca por un diseño de interfaz moderno y bien organizado. Desde el primer momento, la estructura del sitio permite una navegación clara y sencilla gracias al equilibrio de elementos, el uso adecuado del espacio en blanco y la jerarquía visual que guía la atención del usuario hacia los contenidos más relevantes. Los iconos y componentes visuales refuerzan la estética general y proporcionan coherencia y un estilo definido.
                 En términos de experiencia del usuario (UX), la página es intuitiva y accesible para una navegación fluida. El menú está bien ubicado en la zona superior y permite moverse fácilmente entre secciones. La organización de los contenidos sigue una lógica. Aunque no se pueden ver elementos específicos de accesibilidad para personas con discapacidades, los tiempos de carga son rápidos.
                 La tipografía utilizada es moderna de tipo sans-serif. La jerarquía tipográfica permite diferenciar con claridad entre títulos, subtítulos y cuerpo de texto. Además, el contraste entre el texto y el fondo mejora la legibilidad, favoreciendo una experiencia clara y accesible.
                 La paleta de colores guarda coherencia con la identidad visual de la marca. Los colores destacan elementos importantes, lo que ayuda a guiar la interacción del usuario.
@@ -237,6 +254,8 @@
                </p>
 
             </div>
+
+            <a href="#top" class="btn-arriba">↑</a>
 
         </main>
 
