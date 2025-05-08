@@ -1,0 +1,26 @@
+/* Estilos básicos */
+body {
+    font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight:lighter;
+  font-style:normal;
+  background-color: azure;
+}
+
+h1  {
+color: #bdb8b0;
+font-weight: bold;
+font-size: 300%;
+text-align: center;
+}
+h2,
+h3
+section {
+color: #bdb8b0;
+font-size: 100%;
+
+}
+image {
+size: 10px;
+
+}
