@@ -1,6 +1,6 @@
 /* Estilos generales del cuerpo de la página */
 body {
-  font-family: Arial, Helvetica, sans-serif; /* Fuente del texto */
+  font-family: sans-serif; /* Fuente del texto */
   font-weight: lighter;                     /* Grosor de la fuente */
   font-style: normal;                       /* Estilo normal, sin cursiva */
   background-color: #f4f4f4;                /* Color de fondo claro */
@@ -10,7 +10,7 @@ body {
 /* Encabezado principal */
 h1 {
   font-family: "Playfair Display", serif;  /* Fuente decorativa para títulos */
-  color: #bdb8b0;                          /* Color del texto */
+  color: #676664;                          /* Color del texto */
   font-weight: bold;                       /* Texto en negrita */
   font-size: 300%;                         /* Tamaño grande */
   text-align: center;                      /* Centrado horizontal */
@@ -28,18 +28,12 @@ h2 {
   margin-bottom: 30px;
 }
 
-/* Contenedor para mostrar imágenes horizontalmente */
-.contenedor-imagenes {
-  display: flex;            /* Activa Flexbox para organizar en fila */
-  align-items: center;      /* Centra verticalmente las imágenes */
-  gap: 5px;                 /* Espacio entre imágenes */
-}
-
 /* Menú de navegación */
 nav {
   background-color: #bdb8b8; /* Fondo del menú */
   padding: 10px;             /* Espaciado interno */
   text-align: center;        /* Centra el texto del menú */
+  font-family: "Playfair Display", serif;
 }
 
 nav ul {
@@ -67,6 +61,7 @@ nav ul li a:hover {
 /* Ajustes visuales generales para imágenes y videos */
 img, video {
   border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* sombra suave debajo */
 }
 
 /* Estilo para párrafos */
@@ -75,6 +70,7 @@ p {
   margin-bottom: 40px;
 }
 
+/*foto grande inicio*/
 .foto-perfil {
   display: flex;
   align-items: flex-start;
@@ -84,24 +80,25 @@ p {
   margin: auto;
 }
 
+/*aplica texto del inicio*/
 .perfil-info {
   flex: 1;
   text-align: center; /* Centra el texto dentro del bloque de texto */
 }
 
+/*aplica imagenes pequeñas del inicio*/
 .galeria-imagenes {
   display: flex;
   justify-content: center; /* Centra las imágenes dentro del bloque */
   gap: 0.8rem;
   flex-wrap: wrap;
-  height: ;
 }
 
 .galeria-imagenes img {
   width: 80px;
   height: 80px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 /* Responsive para móviles */
