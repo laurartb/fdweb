@@ -1,26 +1,121 @@
-/* Estilos básicos */
+/* Estilos generales del cuerpo de la página */
 body {
-    font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight:lighter;
-  font-style:normal;
-  background-color: azure;
+  font-family: Arial, Helvetica, sans-serif; /* Fuente del texto */
+  font-weight: lighter;                     /* Grosor de la fuente */
+  font-style: normal;                       /* Estilo normal, sin cursiva */
+  background-color: #f4f4f4;                /* Color de fondo claro */
+  text-align: center;                       /* Centra el contenido por defecto */
 }
 
-h1  {
-color: #bdb8b0;
-font-weight: bold;
-font-size: 300%;
-text-align: center;
+/* Encabezado principal */
+h1 {
+  font-family: "Playfair Display", serif;  /* Fuente decorativa para títulos */
+  color: #bdb8b0;                          /* Color del texto */
+  font-weight: bold;                       /* Texto en negrita */
+  font-size: 300%;                         /* Tamaño grande */
+  text-align: center;                      /* Centrado horizontal */
+  margin-top: 30px;                        /* Espacio arriba */
+  margin-bottom: 30px;                     /* Espacio abajo */
 }
-h2,
-h3
-section {
-color: #bdb8b0;
-font-size: 100%;
 
+/* Subtítulos */
+h2 {
+  font-family: "Playfair Display", serif;
+  color: #bdb8b0;
+  font-size: 300%;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 30px;
 }
-image {
-size: 10px;
 
+/* Contenedor para mostrar imágenes horizontalmente */
+.contenedor-imagenes {
+  display: flex;            /* Activa Flexbox para organizar en fila */
+  align-items: center;      /* Centra verticalmente las imágenes */
+  gap: 5px;                 /* Espacio entre imágenes */
+}
+
+/* Menú de navegación */
+nav {
+  background-color: #bdb8b8; /* Fondo del menú */
+  padding: 10px;             /* Espaciado interno */
+  text-align: center;        /* Centra el texto del menú */
+}
+
+nav ul {
+  list-style: none; /* Quita viñetas de la lista */
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;       /* Muestra los elementos en una línea */
+  margin: 0 15px;        /* Espacio a los lados de cada opción */
+}
+
+nav ul li a {
+  color: white;              /* Texto blanco */
+  text-decoration: none;     /* Sin subrayado */
+  font-size: 18px;           /* Tamaño del texto */
+  font-weight: bold;         /* Negrita */
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Ajustes visuales generales para imágenes y videos */
+img, video {
+  border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* Estilo para párrafos */
+p {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.foto-perfil {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.perfil-info {
+  flex: 1;
+  text-align: center; /* Centra el texto dentro del bloque de texto */
+}
+
+.galeria-imagenes {
+  display: flex;
+  justify-content: center; /* Centra las imágenes dentro del bloque */
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  height: ;
+}
+
+.galeria-imagenes img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .foto-perfil {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .perfil-info {
+    text-align: center;
+  }
+
+  .galeria-imagenes {
+    justify-content: center;
+  }
 }

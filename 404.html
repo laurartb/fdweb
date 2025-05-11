@@ -1,119 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - Página no encontrada</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404 - Página no encontrada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-  <style>
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
 
-    /*estilos generales del cuerpo de texto*/
-    body {
-  margin: 0;
-  padding: 0;
-  background-color: #f3e9fc;
-  font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-  position: relative;
-}
+        .error-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #d0d0d0;
+            font-size: 24px;
+        }
 
-/*contenedor general centrado*/
-.container {
-  text-align: center;
-}
+        .card-container {
+            position: relative;
+        }
 
-/*capa de la nota desordenada detras*/
-.card {
-  position: relative;
-  display: inline-block;
-}
+        .card-bg {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            background: #e0e0e0;
+            transform: rotate(-5deg);
+            z-index: 1;
+            top: 10px;
+            left: -10px;
+        }
 
-/*fondo gris detras de la nota en blanco*/
-.card::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 100%;
-  height: 100%;
-  background: #ddd;
-  transform: rotate(-3deg);/*es la inclinacion*/
-  z-index: 0;
-  border-radius: 5px;
-}
+        .card-bg-2 {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            background: #e9e9e9;
+            transform: rotate(3deg);
+            z-index: 2;
+            top: -15px;
+            left: 5px;
+        }
 
-/*nota en blanco*/
-.note {
-  background: white;
-  padding: 2rem 3rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);/*sombra*/
-  position: relative;
-  z-index: 1;
-  transform: rotate(2deg);/*inclinacion*/
-  border-radius: 5px;
-}
+        .card {
+            position: relative;
+            background: white;
+            width: 300px;
+            height: 200px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 3;
+        }
 
-/*numero 404 que hay en la nota*/
-.note h1 {
-  font-size: 4rem;
-  margin: 0;
-}
+        .error-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
 
-/*texto que hay en la nota*/
-.note p {
-  font-size: 1.2rem;
-  margin: 1rem 0 0 0;
-}
+        .error-message {
+            font-size: 14px;
+            line-height: 1.4;
+        }
 
-/*enlace de volver atras*/
-.back-link {
-  display: inline-block;
-  margin-top: 2rem;
-  font-size: 1rem;
-  text-decoration: underline;
-  color: #000;
-  position: relative;
-}
+        .copyright {
+            position: absolute;
+            bottom: 20px;
+            font-size: 12px;
+            color: #888;
+        }
 
-/*caracteristicas generales de las estrellas*/
-.star {
-  position: absolute;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/*posiciones de las estrellas*/
-.star1 { top: 10%; left: 5%; }
-.star2 { top: 20%; right: 10%; }
-.star3 { bottom: 15%; left: 10%; }
-.star4 { bottom: 10%; right: 15%; }
-.star5 { top: 50%; left: 80%; }
-  </style>
+        /* Eliminados los estilos del botón de volver al inicio */
+    </style>
 </head>
-
-
 <body>
+    <div class="error-number">404</div>
 
-  <div class="container">
-    <div class="card">
-      <div class="note">
-        <h1>404</h1>
-        <p>¡Ups! La página que estás buscando no existe :(</p>
-      </div>
+    <div class="card-container">
+        <div class="card-bg"></div>
+        <div class="card-bg-2"></div>
+        <div class="card">
+            <div class="error-title">404</div>
+            <div class="error-message">¡Ups! La página que estás<br>buscando no existe :( </div>
+        </div>
     </div>
-    <br>
-    <a href="#" class="back-link">Vuelve atrás</a>
 
-    <div class="star star1">★</div>
-  <div class="star star2">★</div>
-  <div class="star star3">★</div>
-  <div class="star star4">★</div>
-  <div class="star star5">★</div>
-  </div>
+    <div class="copyright">© 2025 Mi Portafolio.</div>
+    
+    <div class="return-link">
+        <a href="index.html">VOLVER</a>
+    </div>
+
 </body>
 </html>
