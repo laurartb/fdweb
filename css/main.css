@@ -1,9 +1,9 @@
 /* Estilos generales del cuerpo de la página */
 body {
-  font-family: sans-serif; /* Fuente del texto */
+  font-family: 'MiFuentePersonal'; /* Fuente del texto */
   font-weight: lighter;                     /* Grosor de la fuente */
   font-style: normal;                       /* Estilo normal, sin cursiva */
-  background-color: #f4f4f4;                /* Color de fondo claro */
+  background-color:var(--color-fondo);                /* Color de fondo claro */
   text-align: center;                       /* Centra el contenido por defecto */
   font-size: larger;
   background-image: url("/assets/images/fondoinicio.jpg");     /* Ruta a la imagen */
@@ -14,8 +14,8 @@ body {
 
 /* Encabezado principal */
 h1 {
-  font-family: "Playfair Display", serif;  /* Fuente decorativa para títulos */
-  color: #676664;                          /* Color del texto */
+  font-family: 'TituloEspecial', serif;  /* Fuente decorativa para títulos */
+  color:var(--color-texto);                          /* Color del texto */
   font-weight: bold;                       /* Texto en negrita */
   font-size: 300%;                         /* Tamaño grande */
   text-align: center;                      /* Centrado horizontal */
@@ -25,96 +25,13 @@ h1 {
 
 /* Subtítulos */
 h2 {
-  font-family: "Playfair Display", serif;
-  color: #676664;
+  font-family: 'TituloEspecial', serif;
+  color: var(--color-texto);
   font-size: 300%;
   text-align: center;
   margin-top: 70px;
   margin-bottom: 30px;
 }
-
-/* Menú de navegación */
-nav {
-  background-color: #676664; /* Fondo del menú */
-  padding: 10px 20px;             /* Espaciado interno */
-  text-align: center;        /* Centra el texto del menú */
-  font-family: "Playfair Display", serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 40px;
-  margin: 20px auto;
-  max-width: 600px;
-  position: relative;
-}
-
-/* Lista horizontal */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: white;              /* Texto blanco */
-  text-decoration: none;     /* Sin subrayado */
-  font-size: 18px;           /* Tamaño del texto */
-  font-weight: bold;         /* Negrita */
-  border-radius: 20px;
-}
-
-nav ul li a:hover {
-  text-decoration: underline; /* Subrayado al pasar el mouse */
-}
-
-/* Icono hamburguesa */
-.menu-icon {
-  display: none;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* Esconde el checkbox */
-#toggle-menu {
-  display: none;
-}
-
-/* Responsive: modo móvil */
-@media (max-width: 600px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    border-radius: 50px;
-    padding: 10px 20px;
-    width: 90%;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    border-radius: 20px;
-    margin-top: 10px;
-  }
-
-  #toggle-menu:checked + .menu-icon + .nav-links {
-    display: flex;
-  }
-
-  .nav-links li a {
-    padding: 10px;
-  }
-}
-
 
 
 
@@ -128,11 +45,11 @@ img, video {
 p {
   margin-top: 40px;
   margin-bottom: 40px;
-  color: #4c4b4b;
+  color: var(--color-texto);
 }
 
-strong{
-  color: black;
+strong {
+  color: var(--color-texto-strong);
 }
 
 /*foto grande inicio*/
@@ -169,43 +86,9 @@ strong{
 .linea {
   border: none;
   height: 2.5px;
-  background-color: #676664; /* Color de la línea */
+  background-color: var(--color-linea); /* Color de la línea */
   margin: 50px ;       /* Espacio arriba y abajo */
   width: 85%;              /* Control del ancho */
-}
-
-
-/*estos ajustes son para el carrusel de imagenes de los proyectos*/
-.carrusel-auto {
-  overflow: hidden;
-  max-width: 600px;
-  background: #f4f4f4;
-  border-radius: 10px;
-}
-
-.carrusel-track {
-  display: flex;
-  animation: scroll 10s linear infinite;
-}
-
-.carrusel-track img {
-  max-width: 600px;
-  height: 300px;
-  object-fit: contain;
-  margin: 0;
-  border-radius: 10px;
-  flex-shrink: 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Animación de desplazamiento horizontal */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
 }
 
 
@@ -225,14 +108,4 @@ strong{
   .galeria-imagenes {
     justify-content: center;
   }
-}
-
-
-@font-face {
-  font-family: 'MiFuentePersonal';
-  src: url('/assets/fonts/Tural\ Alisoy\ -\ TAModernTimes-RoundedExtLt.otf') format('truetype');
-  }
-
-body {
-  font-family: 'MiFuentePersonal';
 }

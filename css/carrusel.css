@@ -1,0 +1,35 @@
+/* Contenedor general del carrusel */
+.carrusel-auto {
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    background: var(--color-fondo);
+    border-radius: 10px;
+  }
+  
+  /* Línea de imágenes que se deslizan automáticamente */
+  .carrusel-track {
+    display: flex;
+    animation: scroll 50s linear infinite; /* Movimiento continuo */
+  }
+  
+  /* Imágenes del carrusel */
+  .carrusel-track img {
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 10px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Animación de desplazamiento de izquierda a derecha */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-400%);
+    }
+  }

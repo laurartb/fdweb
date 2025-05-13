@@ -1,2 +1,6 @@
 @import url('http://meyerweb.com/eric/tools/css/reset/reset.css'); /* CSS Reset para compatibilidad entre navegadores */
 @import url('./main.css'); /* Estilos principales */
+@import url('./theme.css'); /* Paleta de colores definida con custom properties */
+@import url('navigation.css'); /* Estilos de la barra de navegación y menú responsive */
+@import url('carrusel.css'); /* Estilos del carrusel de imágenes automático */
+@import url('responsive.css'); 

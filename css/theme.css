@@ -1,0 +1,20 @@
+/* Paleta de colores base del proyecto usando custom properties */
+:root {
+    --color-fondo: #f4f4f4;        /* Color principal de fondo */
+    --color-texto: #676664;        /* Color de los textos */
+    --color-menu: #676664;         /* Fondo del menú de navegación */
+    --color-linea: #676664;        /* Color de las líneas divisoras */
+    --color-hover: white;          /* Color al pasar el mouse por los enlaces */
+    --color-texto-strong: #000000; /* Color de palabras en negrita */
+  }
+
+  @font-face {
+    font-family: 'MiFuentePersonal';
+    src: url('/assets/fonts/Tural\ Alisoy\ -\ TAModernTimes-RoundedExtLt.otf') format('truetype');
+    }
+  
+  @font-face {
+    font-family: 'TituloEspecial';
+    src: url('/assets/fonts/Jaoren.otf') format('truetype');
+  }
+  
