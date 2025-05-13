@@ -6,7 +6,7 @@ body {
   background-color: #f4f4f4;                /* Color de fondo claro */
   text-align: center;                       /* Centra el contenido por defecto */
   font-size: larger;
-  background-image: url("/assets/images/fondopared1.jpg");     /* Ruta a la imagen */
+  background-image: url("/assets/images/fondoinicio.jpg");     /* Ruta a la imagen */
   background-size: cover;                  /* Escala para cubrir toda la pantalla */
   background-repeat: no-repeat;            /* No repetir la imagen */
   background-position: center center;      /* Centrada */
@@ -102,7 +102,6 @@ nav ul li a:hover {
     display: none;
     flex-direction: column;
     width: 100%;
-    background: #bdb8b8;
     border-radius: 20px;
     margin-top: 10px;
   }
@@ -129,6 +128,11 @@ img, video {
 p {
   margin-top: 40px;
   margin-bottom: 40px;
+  color: #4c4b4b;
+}
+
+strong{
+  color: black;
 }
 
 /*foto grande inicio*/
@@ -181,7 +185,7 @@ p {
 
 .carrusel-track {
   display: flex;
-  animation: scroll 20s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 .carrusel-track img {
@@ -221,4 +225,14 @@ p {
   .galeria-imagenes {
     justify-content: center;
   }
+}
+
+
+@font-face {
+  font-family: 'MiFuentePersonal';
+  src: url('/assets/fonts/Tural\ Alisoy\ -\ TAModernTimes-RoundedExtLt.otf') format('truetype');
+  }
+
+body {
+  font-family: 'MiFuentePersonal';
 }
