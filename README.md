@@ -23,16 +23,16 @@ La estructura de mi web se puede ver así:
 -    /images -> Imágenes del proyecto
 -    /icons -> iconos de las aplicaciones y /favicon ->iconos de la estrella de la web
 -    /fonts -> Tipografías personalizadas
--/css
+- /css
 -    index.css -> Enlaza todos los .css con el index.html
 -    main.css -> Estilos base
 -    theme.css -> Paleta de colores con variables y tipografías
 -    responsive.css -> Adaptabilidad móvil con @media
 -    carrusel.css -> Estilo y ajustes del carrusel de fotos
 -    navigation.css -> Estilo de barra de navegación
--index.html -> Página principal
--proyectos.html -> Página de proyectos
--404.html -> Página de error personalizada
+- index.html -> Página principal
+- proyectos.html -> Página de proyectos
+- 404.html -> Página de error personalizada
 
 ---
 
