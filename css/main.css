@@ -14,7 +14,7 @@ body {
 
 /* Encabezado principal */
 h1 {
-  font-family: 'TituloEspecial', serif;  /* Fuente decorativa para títulos */
+  font-family: 'Titulo';  /* Fuente decorativa para títulos */
   color:var(--color-texto);                          /* Color del texto */
   font-weight: bold;                       /* Texto en negrita */
   font-size: 300%;                         /* Tamaño grande */
@@ -25,14 +25,22 @@ h1 {
 
 /* Subtítulos */
 h2 {
-  font-family: 'TituloEspecial', serif;
+  font-family: 'Subtitulo', serif;
   color: var(--color-texto);
-  font-size: 300%;
+  font-size: 200%;
   text-align: center;
   margin-top: 70px;
   margin-bottom: 30px;
 }
 
+h3 {
+  font-family: 'Subtitulo', serif;
+  color: var(--color-texto);
+  font-size: 150%;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
 
 
 /* Ajustes visuales generales para imágenes y videos */
@@ -55,11 +63,14 @@ strong {
 /*foto grande inicio*/
 .foto-perfil {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 2rem;
   padding: 2rem;
   max-width: 1000px;
   margin: auto;
+  background-color: var(--color-fondo);
+  border-radius: 10px;
+  justify-content: center;
 }
 
 /*aplica texto del inicio*/
@@ -93,6 +104,39 @@ strong {
 
 
 
+/*iconos de sofware en img*/
+.iconos-apps {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.iconos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: last baseline;
+  margin-top: 1.5rem;
+}
+
+.iconos img {
+  width: 40px;      /* Cambia el tamaño a tu gusto */
+  height: 40px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.icono-con-texto {
+  display: flex;
+  align-items: center;
+  justify-content: last baseline;
+  gap: 0.5rem;
+  margin: 10px auto;
+}
+
+.menu-icon {
+  display: none;
+}
 
 /* Responsive para móviles */
 @media (max-width: 768px) {

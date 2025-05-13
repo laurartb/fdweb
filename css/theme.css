@@ -17,4 +17,13 @@
     font-family: 'TituloEspecial';
     src: url('/assets/fonts/Jaoren.otf') format('truetype');
   }
+
+  @font-face {
+    font-family: 'Subtitulo';
+    src: url('/assets/fonts/Ananda\ Personal\ Use.ttf') format('truetype');
+  }
   
+  @font-face {
+    font-family: 'Titulo';
+    src: url('/assets/fonts/Ananda\ Black\ Personal\ Use.ttf') format('truetype');
+  }
