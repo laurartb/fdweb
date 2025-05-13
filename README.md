@@ -33,3 +33,21 @@ La estructura de mi web se puede ver así:
 index.html -> Página principal
 proyectos.html -> Página de proyectos
 404.html -> Página de error personalizada
+
+---
+
+El diseño responsive lo he hecho usando @media, simplifiqué como elemento visual la barra de navegación a un menú hamburguesa. Además, los textos acompañan a las imágenes en la parte superior o inferior en estas en el estilo del móvil, mientras que en pantallas grandes se encuentran a uno de los lados. Lo mismo pasa con la lista de software, que se divide en columnas en pantallas grandes y en pequeñas se unifica en una sola lista.
+
+---
+
+Las características prinicpales de esta web son:
+
+- Navegación tipo hamburguesa en móviles.
+- Carrusel de imágenes automático
+- Paleta de colores personalizada con `:root` en la carpeta ./css/theme.css
+- Página 404 personalizada
+- Tipografías cargadas desde archivos locales
+
+---
+
+¡Espero que te guste mi web, yo he aprendido mucho construyéndola!
