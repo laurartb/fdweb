@@ -1,6 +1,6 @@
 /* Estilos generales del cuerpo de la página */
 body {
-  font-family: 'MiFuentePersonal'; /* Fuente del texto */
+  font-family:'MiFuentePersonal'; /* Fuente del texto */
   font-weight: lighter;                     /* Grosor de la fuente */
   font-style: normal;                       /* Estilo normal, sin cursiva */
   background-color:var(--color-fondo);                /* Color de fondo claro */
@@ -14,7 +14,7 @@ body {
 
 /* Encabezado principal */
 h1 {
-  font-family: 'Titulo';  /* Fuente decorativa para títulos */
+  font-family:'Titulo';  /* Fuente decorativa para títulos */
   color:var(--color-texto);                          /* Color del texto */
   font-weight: bold;                       /* Texto en negrita */
   font-size: 300%;                         /* Tamaño grande */
@@ -25,7 +25,7 @@ h1 {
 
 /* Subtítulos */
 h2 {
-  font-family: 'Subtitulo', serif;
+  font-family:'Subtitulo', serif;
   color: var(--color-texto);
   font-size: 200%;
   text-align: center;
@@ -34,7 +34,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Subtitulo', serif;
+  font-family:'Subtitulo', serif;
   color: var(--color-texto);
   font-size: 150%;
   text-align: center;
