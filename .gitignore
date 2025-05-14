@@ -1,5 +1,5 @@
 .DS_store
 node_modules
-/assets/images/*
+/assets/images/*.jpg
 .prettierignore
 .vscode/
